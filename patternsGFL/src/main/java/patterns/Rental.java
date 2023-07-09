@@ -16,4 +16,12 @@ public class Rental {
     public Movie getMovie() {
         return movie;
     }
+
+    @Override
+    public String toString() {
+        return "Rental{" +
+                "movie=" + movie.toString() +
+                ", daysRented=" + daysRented +
+                '}';
+    }
 }

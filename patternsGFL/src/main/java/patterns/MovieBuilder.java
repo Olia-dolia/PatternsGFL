@@ -11,6 +11,7 @@ public class MovieBuilder implements Builder {
     private String description;
     private List<String> actors;
 
+    public MovieBuilder(){}
 
     @Override
     public MovieBuilder setTitle(String t) {

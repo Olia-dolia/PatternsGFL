@@ -26,7 +26,7 @@ class Customer {
         for (Rental each : rentals) {
             double thisAmount = 0.0;
             //determine amounts for each line
-            switch (each.getMovie().getPriceCode()) {
+            switch (each.getMovie().getMovieType()) {
                 case REGULAR -> {
                     thisAmount += 2;
                     if (each.getDaysRented() > 2)
@@ -43,7 +43,7 @@ class Customer {
             frequentRenterPoints++;
 
             // add bonus for a two day new release rental
-            if ((each.getMovie().getPriceCode() == NEW_RELEASE) && each.getDaysRented() > 1)
+            if ((each.getMovie().getMovieType() == NEW_RELEASE) && each.getDaysRented() > 1)
                 frequentRenterPoints++;
 
             //show figures for this rental

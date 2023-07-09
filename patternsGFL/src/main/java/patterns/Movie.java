@@ -1,9 +1,8 @@
 package patterns;
 
-
 import java.util.List;
 
-public class Movie {
+public class Movie{
 
     private String title;
     private MovieType priceCode;
@@ -12,13 +11,13 @@ public class Movie {
     private String description;
     private List<String> actors;
 
-    public Movie(){};
+    public Movie(){}
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setMovieType(MovieType priceCode) {
+    public void setMovieType(Movie.MovieType priceCode) {
         this.priceCode = priceCode;
     }
 
@@ -36,6 +35,18 @@ public class Movie {
 
     public void setActors(List<String> actors) {
         this.actors = actors;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", priceCode=" + priceCode +
+                ", country='" + country + '\'' +
+                ", director='" + director + '\'' +
+                ", description='" + description + '\'' +
+                ", actors=" + actors +
+                '}';
     }
 
     public enum MovieType {
@@ -58,23 +69,11 @@ public class Movie {
         return actors;
     }
 
-    public MovieType getPriceCode() {
+    public MovieType getMovieType() {
         return priceCode;
     }
 
     public String getTitle() {
         return title;
-    }
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "title='" + title + '\'' +
-                ", priceCode=" + priceCode +
-                ", country='" + country + '\'' +
-                ", director='" + director + '\'' +
-                ", description='" + description + '\'' +
-                ", actors=" + actors +
-                '}';
     }
 }
